@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd" >
+<tiles-definitions>
+  <definition name="pmsParent" template="/WEB-INF/views/pmsTemplate.jsp">  	
+  
+	<put-attribute name="preScript" value="/includee/pms/preScript.jsp" />
+  	<put-attribute name="headerMenu" value="/includee/pms/headerMenu.jsp" />
+  	<put-attribute name="leftMenu" value="/includee/pms/leftMenu.jsp" />
+	<put-attribute name="footer" value="/includee/pms/footer.jsp" />
+  	<put-attribute name="postScript" value="/includee/pms/postScript.jsp" />
+  	
+  </definition>
+  
+  <definition name="pms/*" extends="pmsParent">
+  	<put-attribute name="content" value="/WEB-INF/views/pms/pmsView.jsp"/>
+  </definition>
+</tiles-definitions>

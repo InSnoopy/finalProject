@@ -20,7 +20,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.10.1</version>
-				<configuration> 
+				<configuration>
 					<source>${java-version}</source>
 					<target>${java-version}</target>
 				</configuration>
@@ -37,6 +37,9 @@
 	</build>
 
 	<dependencies>
+
+		
+
 		<!-- Spring DI Container -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -96,7 +99,7 @@
 			<version>3.1.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<!-- View Layer 지원용 -->
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -194,11 +197,11 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>${com.fasterxml.jackson-version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-xml</artifactId>
-			<version>${com.fasterxml.jackson-version}</version>
-		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>com.fasterxml.jackson.dataformat</groupId> -->
+		<!-- <artifactId>jackson-dataformat-xml</artifactId> -->
+		<!-- <version>${com.fasterxml.jackson-version}</version> -->
+		<!-- </dependency> -->
 
 		<!-- Logging framework -->
 		<dependency>
@@ -239,6 +242,52 @@
 			<artifactId>spring-test</artifactId>
 			<version>${org.springframework-version}</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- mail library -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+
+		<!-- mail 서포트 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- Spring Websocket -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-websocket</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		<!-- Spring stomp -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-messaging</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- scheduling -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>	
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+		
+		<!-- websocket, messaging 보안 -->
+ 		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-messaging</artifactId>
+			<version>${org.springframework.security-version}</version>
 		</dependency>
 	</dependencies>
 </project>
